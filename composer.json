@@ -1,0 +1,21 @@
+{
+    "name": "bz0/twitter-api",
+    "description": "Twitter api library for php",
+    "keywords": ["twitter","api"],
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "bz0",
+        "email": "itgoeson8965@yahoo.co.jp",
+        "homepage": "https://bz0.hateblo.jp"
+      }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "guzzlehttp/guzzle": "^6.0",
+        "guzzlehttp/oauth-subscriber": "^0.3.0"
+    },
+    "autoload": {
+      "psr-4": {"bz0\\Twitter\\": "src/"}
+    }
+}
