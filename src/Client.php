@@ -35,6 +35,9 @@ final class Client{
             case 'favorites':
                 $api = new Api\Favorites($this);
                 break;
+            case 'followers':
+                $api = new Api\Followers($this);
+                break;
             default:
                 break;
         }

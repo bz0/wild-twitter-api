@@ -6,13 +6,18 @@
     require_once(dirname(__FILE__) . "/config.php");
     
     use bz0\Twitter\Client;
-    use bz0\Twitter\Entity\Favorite;
+    use bz0\Twitter\Entity\Follower;
     
     $client = new Client();
+    $follower = new Follower();
+    $follower->user_id = 961565348544655361;
+    $res = $client->api('followers')->ids($follower);
     
+    /*
     $favorites = new Favorite();
     $favorites->id = 1017986452376834048;
     $res = $client->api('favorites')->destroy($favorites);
+    */
     
     //$res = $client->api('favorites')->create($favorites);
     
