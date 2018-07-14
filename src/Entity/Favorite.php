@@ -6,6 +6,10 @@ class Favorite
     /**
      * @var int
      */
+    public $id;
+    /**
+     * @var int
+     */
     public $user_id;
     /**
      * @var string

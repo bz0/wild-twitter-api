@@ -11,7 +11,16 @@
     $client = new Client();
     
     $favorites = new Favorite();
+    $favorites->id = 1017986452376834048;
+    
+    $res = $client->api('favorites')->create($favorites);
+    
+    /*
+    $favorites = new Favorite();
     $favorites->user_id = 1528352858;
     
     $res = $client->api('favorites')->lists($favorites);
+     * 
+     */
+
     var_dump($res);

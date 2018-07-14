@@ -14,4 +14,16 @@ class Favorites extends AbstractApi{
 
         return $res;
     }
+    
+    public function create(Favorite $favorite){
+        $path  = 'favorites/create.json';
+        $res = $this->client->request(self::POST, $path, [
+                'form_params' => [
+                    'id' => $favorite->id,
+                    'include_entities' => $favorite->include_entities
+                ]
+        ]);
+
+        return $res;
+    }
 }
