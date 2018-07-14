@@ -38,6 +38,9 @@ final class Client{
             case 'followers':
                 $api = new Api\Followers($this);
                 break;
+            case 'friends':
+                $api = new Api\Friends($this);
+                break;
             default:
                 break;
         }
