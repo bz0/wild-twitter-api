@@ -5,11 +5,13 @@
     require_once(dirname(__FILE__) . "/vendor/autoload.php");
     require_once(dirname(__FILE__) . "/config.php");
     
-    $client = new \bz0\Twitter\Client();
+    use bz0\Twitter\Client;
+    use bz0\Twitter\Entity\Favorite;
     
-    $params = [
-        'user_id' => '1528352858'
-    ];
+    $client = new Client();
     
-    $res = $client->api('favorites')->lists($params);
+    $favorites = new Favorite();
+    $favorites->user_id = 1528352858;
+    
+    $res = $client->api('favorites')->lists($favorites);
     var_dump($res);
