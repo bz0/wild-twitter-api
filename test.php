@@ -11,7 +11,7 @@
     $client = new Client();
     $follower = new Follower();
     $follower->user_id = 961565348544655361;
-    $res = $client->api('followers')->ids($follower);
+    $res = $client->api('followers')->lists($follower);
     
     /*
     $favorites = new Favorite();

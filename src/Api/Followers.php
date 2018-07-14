@@ -14,4 +14,16 @@ class Followers extends AbstractApi{
 
         return $res;
     }
+    
+    public function lists(Follower $follower)
+    {
+        $path  = 'followers/list.json';
+        $res = $this->client->request(
+                self::GET,
+                $path,
+                ['query' => $follower->toArray()]
+        );
+
+        return $res;
+    }
 }

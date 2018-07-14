@@ -12,6 +12,14 @@ class Follower
      */
     public $screen_name;
     /**
+     * @var boolean
+     */
+    public $skip_status;
+    /**
+     * @var boolean
+     */
+    public $include_user_entities;
+    /**
      * @var int
      */
     public $cursor;
