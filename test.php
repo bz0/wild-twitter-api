@@ -12,8 +12,9 @@
     
     $favorites = new Favorite();
     $favorites->id = 1017986452376834048;
+    $res = $client->api('favorites')->destroy($favorites);
     
-    $res = $client->api('favorites')->create($favorites);
+    //$res = $client->api('favorites')->create($favorites);
     
     /*
     $favorites = new Favorite();

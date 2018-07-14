@@ -26,4 +26,16 @@ class Favorites extends AbstractApi{
 
         return $res;
     }
+    
+    public function destroy(Favorite $favorite){
+        $path  = 'favorites/destroy.json';
+        $res = $this->client->request(self::POST, $path, [
+                'form_params' => [
+                    'id' => $favorite->id,
+                    'include_entities' => $favorite->include_entities
+                ]
+        ]);
+
+        return $res;
+    }
 }
