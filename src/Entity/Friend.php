@@ -16,13 +16,17 @@ class Friend
      */
     public $cursor;
     /**
-     * @var int
+     * @var boolean
      */
-    public $stringify_ids;
+    public $include_user_entities;
     /**
      * @var string
      */
     public $count;
+    /**
+     * @var boolean
+     */
+    public $skip_status;
     
     /**
      * @return array

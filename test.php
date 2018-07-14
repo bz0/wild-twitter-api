@@ -12,7 +12,13 @@
     
     $friend = new Friend();
     $friend->user_id = 961565348544655361;
+    $res = $client->api('friends')->lists($friend);
+    
+    /*
+    $friend = new Friend();
+    $friend->user_id = 961565348544655361;
     $res = $client->api('friends')->ids($friend);
+    */
     
     /*
     $follower = new Follower();

@@ -14,4 +14,16 @@ class Friends extends AbstractApi{
 
         return $res;
     }
+    
+    public function lists(Friend $friend)
+    {
+        $path  = 'friends/list.json';
+        $res = $this->client->request(
+                self::GET,
+                $path,
+                ['query' => $friend->toArray()]
+        );
+
+        return $res;
+    }
 }
