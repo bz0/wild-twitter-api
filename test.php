@@ -6,13 +6,19 @@
     require_once(dirname(__FILE__) . "/config.php");
     
     use bz0\Twitter\Client;
-    use bz0\Twitter\Entity\Friend;
+    use bz0\Twitter\Entity\Tweet;
     
     $client = new Client();
+
+    $tweet = new Tweet();
+    $tweet->q = "Nuxt";
+    $res = $client->api('search')->tweets($tweet);
     
+    /*
     $friend = new Friend();
     $friend->user_id = 961565348544655361;
     $res = $client->api('friends')->lists($friend);
+    */
     
     /*
     $friend = new Friend();

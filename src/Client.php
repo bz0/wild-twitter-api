@@ -3,7 +3,7 @@ namespace bz0\Twitter;
 use GuzzleHttp\Subscriber\Oauth\Oauth1;
 use GuzzleHttp\HandlerStack;
 
-final class Client{
+class Client{
     const API_VERSION = '1.1';
     private $httpClient;
     private $httpOptions = [
@@ -40,6 +40,9 @@ final class Client{
                 break;
             case 'friends':
                 $api = new Api\Friends($this);
+                break;
+            case 'search':
+                $api = new Api\Search($this);
                 break;
             default:
                 break;
