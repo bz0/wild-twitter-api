@@ -44,6 +44,9 @@ class Client{
             case 'search':
                 $api = new Api\Search($this);
                 break;
+            case 'friendships':
+                $api = new Api\Friendships($this);
+                break;
             default:
                 break;
         }
