@@ -11,8 +11,14 @@
     $client = new Client();
     
     $friendship = new Friendship();
+    $friendship->stringify_ids = "true";
+    $res = $client->api('friendships')->incoming($friendship);
+    
+    /*
+    $friendship = new Friendship();
     $friendship->screen_name = "syncerjp";
     $res = $client->api('friendships')->lookup($friendship);
+    */
     
     /*
     $tweet = new Tweet();

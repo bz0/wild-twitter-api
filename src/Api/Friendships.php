@@ -14,4 +14,16 @@ class Friendships extends AbstractApi{
 
         return $res;
     }
+    
+    public function incoming(Friendship $friendship)
+    {
+        $path  = 'friendships/incoming.json';
+        $res = $this->client->request(
+                self::GET,
+                $path,
+                ['query' => $friendship->toArray()]
+        );
+
+        return $res;
+    }
 }

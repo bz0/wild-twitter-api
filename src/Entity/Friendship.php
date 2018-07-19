@@ -12,6 +12,14 @@ class Friendship
      */
     public $screen_name;
     /**
+     * @var string
+     */
+    public $cursor;
+    /**
+     * @var string
+     */
+    public $stringify_ids;
+    /**
      * @return array
      */
     public function toArray()
